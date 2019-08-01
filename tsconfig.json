@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "outDir": "./dist",
+    "sourceMap": false,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "lib": ["es6"],
+    "target": "es5"
+  },
+  "inclue": ["src/**/*.ts"],
+  "exclude": ["node_modules", "jest.config.js", "src/__tests__"]
+}

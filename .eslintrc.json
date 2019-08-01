@@ -1,0 +1,59 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts"]
+      }
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "rules": {
+    "complexity": ["error", { "max": 8 }],
+    "max-depth": ["error", { "max": 3 }],
+    "max-nested-callbacks": ["error", { "max": 4 }],
+    "max-params": ["error", { "max": 4 }],
+    "max-statements": ["error", { "max": 12 }],
+    "arrow-body-style": ["error", "as-needed"],
+    "operator-linebreak": ["error", "before"],
+    "object-property-newline": [
+      "error",
+      { "allowAllPropertiesOnSameLine": false }
+    ],
+    "no-underscore-dangle": 0,
+    "no-shadow": "off",
+    "@typescript-eslint/explicit-function-return-type": [
+      "error",
+      {
+        "allowExpressions": true,
+        "allowTypedFunctionExpressions": true,
+        "allowHigherOrderFunctions": false
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*/**/*.{spec,test}.{ts,tsx}", "__mocks__/**"],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
+}
